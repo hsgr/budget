@@ -1,16 +1,15 @@
-/*
-    Basic DOM
-*/
-html {
-    font: 100%/1.3 Helvetica, Arial, sans-serif;
-    color: #000;
-    background: #fff;
-}
+@font-face { font-family: OpenSans; src: local('OpenSans'), url('/fonts/OpenSans-Regular.ttf');}
+@font-face { font-family: OpenSans; font-weight: bold; src: local('OpenSans-Bold'), url('/fonts/OpenSans-Bold.ttf');}
+@font-face { font-family: OpenSans; font-style: italic; src: local('OpenSans-Italic'), url('/fonts/OpenSans-Italic.ttf');}
+@font-face { font-family: OpenSans; font-weight: bold; font-style: italic; src: local('OpenSans-BoldItalic'), url('/fonts/OpenSans_BoldItalic.ttf');}
+
 
 body {
-    font: 105%/1.3 Helvetica, Arial, sans-serif;
+    color: #000;
+    background: #fff;
+    font-family:OpenSans;
+    font-size:12px;
     margin: 1em 2em 2em 2em;
-/*    margin-bottom: 30px;*/
 }
 
 a {
