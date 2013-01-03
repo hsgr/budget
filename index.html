@@ -16,10 +16,10 @@
         // ===========
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Year');
-        data.addColumn('number', 'Έσοδα €7219.50');
-        data.addColumn('number', 'Έξοδα €6666.51');
+        data.addColumn('number', 'Έσοδα €7222.91');
+        data.addColumn('number', 'Έξοδα €6677.29');
         data.addRows([
-            ['2012', 6679.50, 6666.51],
+            ['2012', 7222.91, 6677.29],
         ]);
 
         var options = {
@@ -49,7 +49,7 @@
             ['Προμήθειες €218.39', 218.39],
             ['Internet €212.12', 212.12],
             ['Νερό €92', 92],
-            ['Συναλλαγές (paypal, bank) €7.37', 7.37],
+            ['Συναλλαγές (paypal, bank) €10.78', 10.78],
         ]);
 
         var options = {
@@ -59,6 +59,28 @@
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('expenses_div'));
+        chart.draw(data, options);
+
+
+        // ============
+        // = Income =
+        // ============
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Item');
+        data.addColumn('number', 'Cost');
+        data.addRows([
+            ['Υπόλοιπο €439.14', 439.14],
+            ['Συνδρομές €5912', 5912],
+            ['Δωρέες €871.77', 871.77],
+        ]);
+
+        var options = {
+          // title: 'Hackerspace.gr Budget',
+            chartArea: { left: 0, top: 5, width: "100%", height: "95%"},
+            fontSize: 16
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('income_div'));
         chart.draw(data, options);
     }
     </script>
@@ -79,9 +101,15 @@
             </article>
             <article>
                 <header>
-                    <h2>Έξοδα 2012 (μέχρι τώρα)</h2>
+                    <h2>Έξοδα 2012</h2>
                 </header>
                 <div id="expenses_div" class="graph" style="width: 600px; height: 300px;"></div>
+            </article>
+            <article>
+                <header>
+                    <h2>Έσοδα 2012</h2>
+                </header>
+                <div id="income_div" class="graph" style="width: 600px; height: 300px;"></div>
             </article>
 
             <article>
