@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700italic,700&subset=latin,greek' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="media/css/app.css" type="text/css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+        // ============
+        // = Income =
+        // ============
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Item');
+        data.addColumn('number', 'Cost');
+        data.addRows([
+            ['Yπόλοιπο 2012 €545.62', 545.62],
+            ['Συνδρομές €5922.5', 5922.5],
+            ['Δωρέες €1334.35', 1334.35],
+        ]);
+
+        var options = {
+          // title: 'Hackerspace.gr Budget',
+            chartArea: { left: 0, top: 5, width: "100%", height: "95%"},
+            fontSize: 16
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('income_div'));
+        chart.draw(data, options);
+   }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="main" role="main" class="text">
+            <article>
+                <header>
+                    <h3>Έσοδα 2013</h3>
+                </header>
+                <div id="income_div" class="graph" style="width: 600px; height: 300px;"></div>
+            </article>
+       </div>
+    </div>
+</body>
+</html>

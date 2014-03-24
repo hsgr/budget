@@ -1,22 +1,11 @@
-@font-face { font-family: OpenSans; src: local('OpenSans'), url('fonts/OpenSans-Regular.ttf');}
-@font-face { font-family: OpenSans; font-weight: bold; src: local('OpenSans-Bold'), url('fonts/OpenSans-Bold.ttf');}
-@font-face { font-family: OpenSans; font-style: italic; src: local('OpenSans-Italic'), url('fonts/OpenSans-Italic.ttf');}
-@font-face { font-family: OpenSans; font-weight: bold; font-style: italic; src: local('OpenSans-BoldItalic'), url('fonts/OpenSans_BoldItalic.ttf');}
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic&subset=latin,greek);
 
 body {
     color: #000;
-    background: #fff;
-    font-family:OpenSans;
+    background: #eee;
+    font-family:'Open Sans';
     font-size:12px;
     margin: 1em 2em 2em 2em;
-}
-
-a {
-    color: #000;
-}
-a:hover {
-    text-decoration: underline;
 }
 
 h1 {
@@ -25,6 +14,7 @@ h1 {
     margin-top: 0;
     margin-bottom: 0.4em;
 }
+
 h2 {
     font-size: 2em;
     font-weight: bold;
@@ -64,11 +54,11 @@ footer {
     Layout
 */
 #container {
-    width: 880px;
+    width: 650px;
 }
 
 .text {
-    max-width: 800px;
+    max-width: 600px;
 }
 
 #credits {

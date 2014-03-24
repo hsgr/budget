@@ -3,129 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Hackspace.gr: Budget</title>
-    <link rel="stylesheet" href="css/app.css" type="text/css">
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-    google.load("visualization", "1", {packages:["corechart"]});
-    google.setOnLoadCallback(drawCharts);
-
-    function drawCharts() {
-
-        // ===========
-        // = Balance =
-        // ===========
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Year');
-        data.addColumn('number', 'Έσοδα €7222.91');
-        data.addColumn('number', 'Έξοδα €6677.29');
-        data.addRows([
-            ['2012', 7222.91, 6677.29],
-        ]);
-
-        var options = {
-          // title: 'Hackerspace.gr Budget',
-            axisTitlesPosition: 'none',
-            legend: { position: 'top' },
-            hAxis: { viewWindow: { min: 0 } },
-            vAxis: { textPosition: 'none' },
-            chartArea: { left: 10, top: 30, width: "100%", height: "60%"},
-            fontSize: 16
-        };
-
-        var chart = new google.visualization.BarChart(document.getElementById('balance_div'));
-        chart.draw(data, options);
-
-        // ============
-        // = Expenses =
-        // ============
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Item');
-        data.addColumn('number', 'Cost');
-        data.addRows([
-            ['Ενοίκιο €3300', 3300],
-            ['Ρεύμα €1815', 1815],
-            ['Εξοπλισμός €729', 729],
-            ['Propaganda €300', 300],
-            ['Προμήθειες €218.39', 218.39],
-            ['Internet €212.12', 212.12],
-            ['Νερό €92', 92],
-            ['Συναλλαγές (paypal, bank) €10.78', 10.78],
-        ]);
-
-        var options = {
-          // title: 'Hackerspace.gr Budget',
-            chartArea: { left: 0, top: 5, width: "100%", height: "95%"},
-            fontSize: 16
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('expenses_div'));
-        chart.draw(data, options);
-
-
-        // ============
-        // = Income =
-        // ============
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Item');
-        data.addColumn('number', 'Cost');
-        data.addRows([
-            ['Υπόλοιπο €439.14', 439.14],
-            ['Συνδρομές €5912', 5912],
-            ['Δωρέες €871.77', 871.77],
-        ]);
-
-        var options = {
-          // title: 'Hackerspace.gr Budget',
-            chartArea: { left: 0, top: 5, width: "100%", height: "95%"},
-            fontSize: 16
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('income_div'));
-        chart.draw(data, options);
-    }
-    </script>
+    <link rel="stylesheet" href="/media/css/app.css" type="text/css">
 </head>
 <body>
     <div id="container">
         <header role="banner" class="text">
-            <h1><img src="img/hackerspace.svg" width="70" height="70" alt="Hackerspace.gr" /> The Cost of Hacking</h1>
-            <p>Το Hackspace.gr χρηματοδοτείται από τα μέλη του και από δωρεές.</p>
+            <h1><img src="/media/img/hackerspace.svg" width="70" height="70" alt="Hackerspace.gr" /> The Cost of Hacking</h1>
         </header>
 
         <div id="main" role="main" class="text">
-            <article>
-                <header>
-                    <h2>Ισολογισμός 2012</h2>
-                </header>
-                <div id="balance_div" class="graph" style="width: 600px; height: 150px;"></div>
-            </article>
-            <article>
-                <header>
-                    <h2>Έξοδα 2012</h2>
-                </header>
-                <div id="expenses_div" class="graph" style="width: 600px; height: 300px;"></div>
-            </article>
-            <article>
-                <header>
-                    <h2>Έσοδα 2012</h2>
-                </header>
-                <div id="income_div" class="graph" style="width: 600px; height: 300px;"></div>
-            </article>
-
-            <article>
-                <header>
-                    <h2>Πως μπορείς να βοηθήσεις</h2>
-                </header>
-                <ul>
-                    <li><strong class="large">Γίνε μέλος!</strong></li>
-                    <li>Κάνε μια δωρεά.</li>
-                    <li>Παραχώρησε εξοπλισμό ή άλλες προμήθειες</li>
-                </ul>
-            </article>
+            <a href="/2012/">2012</a><br />
+            <a href="/2013/">2013</a><br />
         </div>
         <footer id="credits" role="contentinfo" class="text">
             <hr />
-            <p>Last updated 31 December 2012.</p>
+            <p>
+                <a href="http://hackerspace.gr">hackerspace.gr</a> -
+                Source code at <a href="https://github.com/hsgr/budget" target="_blank">github</a>
+            </p>
         </footer>
     </div>
 </body>
