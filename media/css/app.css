@@ -45,6 +45,22 @@ footer {
     display: block;
 }
 
+.index-year {
+    padding: 5px 10px;
+    background-color: white;;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: block;
+    font-size: 2em;
+    text-decoration: none;
+    width: 100px;
+    text-align: center;
+}
+
 .graph {
     margin: 0px auto;
     width: 100%;
