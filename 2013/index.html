@@ -16,10 +16,11 @@
         // ===========
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Year');
-        data.addColumn('number', 'Income €7802.47');
+        data.addColumn('number', 'Income €7256.85');
         data.addColumn('number', 'Expenses €6618.97');
+        data.addColumn('number', '2012 Surplus €545.62');
         data.addRows([
-            ['2013', 7802.47, 6618.97],
+            ['2013', 7256.85, 6618.97, 545.62],
         ]);
 
         var options = {
@@ -68,7 +69,6 @@
         data.addColumn('string', 'Item');
         data.addColumn('number', 'Cost');
         data.addRows([
-            ['Previous Balance €545.62', 545.62],
             ['Membership Fees €5922.5', 5922.5],
             ['Donations €1334.35', 1334.35],
         ]);
