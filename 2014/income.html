@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700italic,700&subset=latin,greek' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="media/css/app.css" type="text/css">
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700italic,700&subset=latin,greek' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="media/css/app.css" type="text/css">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
     google.load("visualization", "1", {packages:["corechart"]});
     google.setOnLoadCallback(drawCharts);
 
@@ -30,18 +30,18 @@
         var chart = new google.visualization.PieChart(document.getElementById('income_div'));
         chart.draw(data, options);
    }
-    </script>
+  </script>
 </head>
 <body>
-    <div id="container">
-        <div id="main" role="main" class="text">
-            <article>
-                <header>
-                    <h3>Έσοδα 2014</h3>
-                </header>
-                <div id="income_div" class="graph" style="width: 600px; height: 300px;"></div>
-            </article>
-       </div>
+  <div id="container">
+    <div id="main" role="main" class="text">
+      <article>
+        <header>
+          <h3>Έσοδα 2014</h3>
+        </header>
+        <div id="income_div" class="graph" style="width: 600px; height: 300px;"></div>
+      </article>
     </div>
+  </div>
 </body>
 </html>

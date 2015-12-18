@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Hackspace.gr: Budget</title>
-    <link rel="stylesheet" href="../media/css/app.css" type="text/css">
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+  <meta charset="utf-8">
+  <title>Hackspace.gr: Budget</title>
+  <link rel="stylesheet" href="../media/css/app.css" type="text/css">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
     google.load("visualization", "1", {packages:["corechart"]});
     google.setOnLoadCallback(drawCharts);
 
@@ -83,42 +83,42 @@
         var chart = new google.visualization.PieChart(document.getElementById('income_div'));
         chart.draw(data, options);
     }
-    </script>
+  </script>
 </head>
 <body>
-    <div id="container">
-        <header role="banner" class="text">
-            <h1><a href="/"><img src="../media/img/hackerspace.svg" width="70" height="70" alt="Hackerspace.gr" /></a> The Cost of Hacking</h1>
+  <div id="container">
+    <header role="banner" class="text">
+      <h1><a href="/"><img src="../media/img/hackerspace.svg" width="70" height="70" alt="Hackerspace.gr"></a> The Cost of Hacking</h1>
+    </header>
+
+    <div id="main" role="main" class="text">
+      <article>
+        <header>
+          <h2>Balance 2014</h2>
         </header>
+        <div id="balance_div" class="graph" style="width: 600px; height: 150px;"></div>
+      </article>
+      <article>
+        <header>
+          <h2>Expenses 2014</h2>
+        </header>
+        <div id="expenses_div" class="graph" style="width: 600px; height: 300px;"></div>
+      </article>
+      <article>
+        <header>
+          <h2>Income 2014</h2>
+        </header>
+        <div id="income_div" class="graph" style="width: 600px; height: 300px;"></div>
+      </article>
 
-        <div id="main" role="main" class="text">
-            <article>
-                <header>
-                    <h2>Balance 2014</h2>
-                </header>
-                <div id="balance_div" class="graph" style="width: 600px; height: 150px;"></div>
-            </article>
-            <article>
-                <header>
-                    <h2>Expenses 2014</h2>
-                </header>
-                <div id="expenses_div" class="graph" style="width: 600px; height: 300px;"></div>
-            </article>
-            <article>
-                <header>
-                    <h2>Income 2014</h2>
-                </header>
-                <div id="income_div" class="graph" style="width: 600px; height: 300px;"></div>
-            </article>
-
-            <footer id="credits" role="contentinfo" class="text">
-                <hr />
-                <p>
-                    <a href="http://hackerspace.gr">hackerspace.gr</a> -
-                    Source code at <a href="https://github.com/hsgr/budget" target="_blank">github</a>
-                </p>
-            </footer>
-        </div>
+      <footer id="credits" role="contentinfo" class="text">
+        <hr>
+        <p>
+          <a href="http://hackerspace.gr">hackerspace.gr</a> -
+          Source code at <a href="https://github.com/hsgr/budget" target="_blank">github</a>
+        </p>
+      </footer>
     </div>
+  </div>
 </body>
 </html>
