@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hackspace.gr: Budget</title>
+  <link rel="stylesheet" href="../media/css/app.css" type="text/css">
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+
+        // ===========
+        // = Balance =
+        // ===========
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Year');
+        data.addColumn('number', 'Income 9099.60€');
+        data.addColumn('number', 'Expenses 8248.51€');
+        data.addColumn('number', '2015 Deficit 19.61€');
+        data.addRows([
+            ['2016', 9099.60, 8248.51, 19.61],
+        ]);
+
+        var options = {
+          // title: 'Hackerspace.gr Budget',
+            axisTitlesPosition: 'none',
+            legend: { position: 'top' },
+            hAxis: { viewWindow: { min: 0 } },
+            vAxis: { textPosition: 'none' },
+            chartArea: { left: 10, top: 30, width: "100%", height: "60%"},
+            fontSize: 16
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('balance_div'));
+        chart.draw(data, options);
+
+        // ============
+        // = Expenses =
+        // ============
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Item');
+        data.addColumn('number', 'Cost');
+        data.addRows([
+            ['Rent 3360.00€', 3360.00],
+            ['Electricity 2003.50€', 2003.50],
+            ['Logistics/Taxes 1330.31€', 1330.31],
+            ['Supplies 589.57€', 589.57],
+            ['Internet 357.43', 357.43],
+            ['Propaganda 300.00€', 300.00],
+            ['Events 170.00€', 170.00],
+            ['Maintainance 80.00€', 80.00],
+            ['Water 57.70€', 57.70],
+        ]);
+
+        var options = {
+          // title: 'Hackerspace.gr Budget',
+            chartArea: { left: 0, top: 5, width: "100%", height: "95%"},
+            fontSize: 16
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('expenses_div'));
+        chart.draw(data, options);
+
+
+        // ============
+        // = Income =
+        // ============
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Item');
+        data.addColumn('number', 'Cost');
+        data.addRows([
+            ['Membership Fees 6041.00€', 7339.00],
+            ['Donations 1776.60€', 1760.60],
+        ]);
+
+        var options = {
+          // title: 'Hackerspace.gr Budget',
+            chartArea: { left: 0, top: 5, width: "100%", height: "95%"},
+            fontSize: 16
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('income_div'));
+        chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <header role="banner" class="text">
+      <h1><a href="/"><img src="../media/img/hackerspace.svg" width="70" height="70" alt="Hackerspace.gr"></a> The Cost of Hacking</h1>
+    </header>
+
+    <div id="main" role="main" class="text">
+      <article>
+        <header>
+          <h2>Balance 2016</h2>
+        </header>
+        <div id="balance_div" class="graph" style="width: 670px; height: 150px;"></div>
+      </article>
+      <article>
+        <header>
+          <h2>Expenses 2016</h2>
+        </header>
+        <div id="expenses_div" class="graph" style="width: 670px; height: 300px;"></div>
+      </article>
+      <article>
+        <header>
+          <h2>Income 2016</h2>
+        </header>
+        <div id="income_div" class="graph" style="width: 670px; height: 300px;"></div>
+      </article>
+
+      <footer id="credits" role="contentinfo" class="text">
+        <hr>
+        <p>
+          <a href="http://hackerspace.gr">hackerspace.gr</a> -
+          Source code at <a href="https://github.com/hsgr/budget" target="_blank">github</a>
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
